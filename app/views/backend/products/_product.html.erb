@@ -1,0 +1,12 @@
+<tr>
+  <td><%= image_tag product.image if product.image.attached? %></td>
+  <td><%= product.name %></td>
+  <td><%= product.active %></td>
+  <td><%= product.praice %></td>
+  <td> tag.name </td>
+  <td class='text-right'>
+    <%= link_to 'Ver', backend_product_path(product), class: 'btn btn-success' %>
+    <%= link_to 'Editar', edit_backend_product_path(product), class: 'btn btn-success' %>
+    <%= link_to 'Borrar', backend_product_path(product), method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-danger' %>
+  </td>
+</tr>

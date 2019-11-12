@@ -1,0 +1,50 @@
+<%= render 'flash_message' %>
+<%= form_with model: [:backend, @product], local: true do |f| %>
+<div class='card'>
+  <div class='card-body'>
+
+    <div class="form-group">
+      <%= f.file_field :image %>
+    </div>
+    <div class="form-group">
+      <%= f.label :name, 'Nombre' %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :internalCode, 'Codigo' %>
+      <%= f.text_field :internalCode, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :category_id, 'Categoria' %>
+      <%= f.collection_select :category_id, Category.all, :id, :name, {}, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :activo, 'Activo' %>
+      <%= f.check_box :paid %>
+    </div>
+    <div class="form-group">
+      <%= f.label :tag_id, 'Etiqueta' %>
+      <%= f.collection_select :tag_ids, Tag.all, :id, :name, {}, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :praice, 'Precio' %>
+      <%= f.text_field :praice, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :cost, 'Costo' %>
+      <%= f.text_field :cost, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :description, 'Descripcion' %>
+      <%= f.text_area :description, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='card-footer'>
+    <%= link_to 'Volver', backend_products_path, class: 'btn btn-outline-secondary' %>
+    <%= f.submit 'Guardar', class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<!-- IMAGENES -->
+
+<% end %>

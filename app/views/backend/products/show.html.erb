@@ -1,0 +1,28 @@
+<h1>Detalle de producto</h1>
+
+<div class='card'>
+  <div class='card-body'>
+    <div class="mb-3">
+      <b>Nombre: </b> <%= @product.name %><br/>
+    </div>
+    <div class="mb-3">
+      <b>Codigo Interno: </b> <%= @product.internalCode %> <br/>
+    </div>
+    <div class="mb-3">
+      <b>Precio: </b> <%= @product.praice %> <br/>
+    </div>
+    <div class="mb-3">
+      <b>Costo: </b> <%= @product.cost %> <br/>
+    </div>
+    <div class="mb-3">
+      <b>Categoria: </b> <%= @product.category&.name %> <br/>
+    </div>
+      <div class="mb-3">
+      <b>Contenido: </b> <%= @product.description %> <br/>
+    </div>
+  
+  </div>
+  <div class='card-footer'>
+    <%= link_to 'Volver', backend_products_path, class: 'btn btn-outline-secondary' %>
+  </div>
+</div>

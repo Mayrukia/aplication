@@ -1,0 +1,9 @@
+<tr>
+  <td>
+    <%= category.name %>
+  </td>
+  <td class='text-right'>
+    <%= link_to 'Editar', edit_backend_category_path(category), class: 'btn btn-success' %>
+    <%= link_to 'Borrar', backend_category_path(category), method: :delete, data: { confirm: 'Esta seguro?' }, class: 'btn btn-danger' %>
+  </td>
+</tr>

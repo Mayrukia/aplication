@@ -1,0 +1,14 @@
+<h1 class='mt-2'>Categorias</h1>
+<%= render 'flash_message' %>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th>Nombre</th>
+      <th class='text-right'><%= link_to 'Nueva Categoria', new_backend_category_path, class: 'btn btn-dark' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @categories %>
+  </tbody>
+</table>

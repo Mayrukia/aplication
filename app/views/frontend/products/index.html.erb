@@ -1,0 +1,21 @@
+<h1 class='mt-2'>Productos</h1>
+<%= render 'flash_message' %>
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th class='text-right'><%= link_to 'Nuevo Producto', new_backend_product_path, class: 'btn btn-dark' %></th>
+    </tr>
+    <tr>
+      <th> image</th>
+      <th>Producto</th>
+      <th>Activo</th>
+      <th>Precio</th>
+      <th>Eiquetas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @presenter.products %>
+  </tbody>
+</table>
+
+<%= will_paginate @presenter.products %>

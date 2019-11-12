@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8"
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'backend', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'backend', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+     <div class="d-flex" id="wrapper">
+       <%= render 'sidebar' %>
+
+       <div id="page-content-wrapper">
+         <%= render 'navbar' %>
+
+         <div class="container-fluid">
+           <%= yield %>
+         </div>
+       </div>
+     </div>
+   </body>
+</html>

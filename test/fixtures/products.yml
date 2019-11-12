@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  internalCode: 1
+  praice: 1.5
+  cost: 1.5
+  active: false
+
+two:
+  name: MyString
+  description: MyText
+  internalCode: 1
+  praice: 1.5
+  cost: 1.5
+  active: false
